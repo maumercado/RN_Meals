@@ -1,4 +1,4 @@
-import 'react-native-gesture-handler';
+import 'react-native-gesture-handler'
 
 import { StatusBar } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
@@ -9,9 +9,9 @@ import { Ionicons } from '@expo/vector-icons'
 import CategoriesScreen from './screens/CategoriesScreen'
 import MealsOverviewScreen from './screens/MealsOverviewScreen'
 import MealDetailsScreen from './screens/MealDetailsScreen'
-import FavouritesScreen from './screens/FavouritesScreen';
+import FavouritesScreen from './screens/FavouritesScreen'
 
-import FavouritesContextProvider from './store/context/favourites-context';
+import FavouritesContextProvider from './store/context/favourites-context'
 
 const Stack = createNativeStackNavigator()
 const Drawer = createDrawerNavigator()
@@ -32,7 +32,7 @@ function DrawerNavigator () {
         },
         drawerActiveTintColor: '#3f2f25',
         drawerActiveBackgroundColor: '#e4baa1',
-        drawerInactiveTintColor: 'white',
+        drawerInactiveTintColor: 'white'
       }}
     >
       <Drawer.Screen

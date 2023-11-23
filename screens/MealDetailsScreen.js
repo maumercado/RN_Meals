@@ -3,21 +3,18 @@ import { View, Image, Text, StyleSheet, ScrollView } from 'react-native'
 
 import { MEALS } from '../data/dummy-data'
 
-import { FavouritesContext } from '../store/context/favourites-context';
+import { FavouritesContext } from '../store/context/favourites-context'
 
 import MealDetails from '../components/MealDetails'
 import Subtitle from '../components/MealDetail/Subtitle'
 import List from '../components/MealDetail/List'
 import IconButton from '../components/IconButton'
 
-
-
 function MealDetailsScreen ({ route, navigation }) {
   const favouritesMealsCtx = useContext(FavouritesContext)
   const { mealId } = route.params
   const selectedMeal = MEALS.find(meal => meal.id === mealId)
   const mealIsFavourite = favouritesMealsCtx.ids.some(meal => meal === route.params.mealId)
-
 
   function changeFavouriteStatusHandler () {
     if (mealIsFavourite) {
@@ -33,7 +30,7 @@ function MealDetailsScreen ({ route, navigation }) {
         return (
           <IconButton
             icon={mealIsFavourite ? 'star' : 'star-outline'}
-            color="white"
+            color='white'
             onPress={changeFavouriteStatusHandler}
           />
         )

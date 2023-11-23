@@ -2,7 +2,7 @@ import { FlatList, View, StyleSheet } from 'react-native'
 
 import MealItem from './MealItem'
 
-function renderMealItem({ item }) {
+function renderMealItem ({ item }) {
   const mealItemProps = {
     id: item.id,
     title: item.title,

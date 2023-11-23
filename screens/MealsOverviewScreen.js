@@ -3,7 +3,6 @@ import { MEALS, CATEGORIES } from '../data/dummy-data'
 
 import MealsList from '../components/MealsList/MealsList'
 
-
 function MealsOverviewScreen ({ route, navigation }) {
   const { categoryId } = route.params
   const displayedMeals = MEALS.filter(meal => meal.categoryIds.includes(categoryId))
@@ -21,7 +20,6 @@ function MealsOverviewScreen ({ route, navigation }) {
       items={displayedMeals}
     />
   )
-
 }
 
 export default MealsOverviewScreen

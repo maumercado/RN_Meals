@@ -1,9 +1,9 @@
-import { useContext } from "react"
+import { useContext } from 'react'
 
-import { MEALS } from "../data/dummy-data"
+import { MEALS } from '../data/dummy-data'
 
-import MealsList from "../components/MealsList/MealsList"
-import { FavouritesContext } from "../store/context/favourites-context"
+import MealsList from '../components/MealsList/MealsList'
+import { FavouritesContext } from '../store/context/favourites-context'
 
 function FavouritesScreen () {
   const favouritesMealsCtx = useContext(FavouritesContext)
