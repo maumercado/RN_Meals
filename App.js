@@ -26,8 +26,15 @@ function DrawerNavigator () {
         }
       }}
     >
-      <Drawer.Screen name='Categories' component={CategoriesScreen} />
-      <Drawer.Screen name='Favourites' component={FavouritesScreen} />
+      <Drawer.Screen
+        name='Categories'
+        component={CategoriesScreen} options={{
+        title: 'All Categories'
+      }}/>
+      <Drawer.Screen
+        name='Favourites'
+        component={FavouritesScreen}
+      />
     </Drawer.Navigator>
   )
 }
@@ -62,6 +69,9 @@ export default function App () {
           <Stack.Screen
             name='MealDetails'
             component={MealDetailsScreen}
+            options={{
+              title: 'Meal Details'
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>
